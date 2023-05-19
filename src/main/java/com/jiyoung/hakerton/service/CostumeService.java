@@ -1,6 +1,9 @@
 package com.jiyoung.hakerton.service;
 
 import com.jiyoung.hakerton.domain.Costume;
+import com.jiyoung.hakerton.domain.Flag;
+import com.jiyoung.hakerton.domain.dto.CostumeQuestionDTO;
+import com.jiyoung.hakerton.domain.dto.FlagQuestionDTO;
 import com.jiyoung.hakerton.repository.CostumeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -9,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -16,21 +20,8 @@ import java.util.Optional;
 public class CostumeService {
     private final CostumeRepository costumeRepository;
 
-    public List<Long> getCostumeId() {
-
-        List<Costume> costumes = costumeRepository.findAll();
-
-        List<Long> id = new ArrayList<>();
-        for (Costume costume : costumes) {
-            id.add(costume.getId());
-        }
-
-        return id;
-    }
-
-
-    public Optional<Costume> getCostumeDetails(Long costumeId) {
-        return costumeRepository.findById(costumeId);
-
+    public List<CostumeQuestionDTO> getCostumeQuestion() {
+        List<Costume> costumeList = costumeRepository.findAll();
+        return costumeList.stream().map(costume -> new CostumeQuestionDTO(costume)).collect(Collectors.toList());
     }
 }

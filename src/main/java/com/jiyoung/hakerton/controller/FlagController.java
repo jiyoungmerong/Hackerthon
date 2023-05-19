@@ -1,7 +1,7 @@
 package com.jiyoung.hakerton.controller;
 
 import com.jiyoung.hakerton.domain.Flag;
-import com.jiyoung.hakerton.domain.dto.FlagDTO;
+import com.jiyoung.hakerton.domain.dto.FlagQuestionDTO;
 import com.jiyoung.hakerton.repository.FlagRepository;
 import com.jiyoung.hakerton.service.FlagService;
 import lombok.RequiredArgsConstructor;
@@ -21,36 +21,19 @@ public class FlagController {
     private final FlagRepository flagRepository;
 
     @GetMapping("/flag")
-    public ResponseEntity<FlagDTO> getRandomFlag() { // 랜덤 국기 이미지
-        List<Long> id = new ArrayList<>(flagService.getFlagId());
-
-        Collections.shuffle(id); // 리스트 섞기
-        Long randomId = id.get(0); // 첫번째요소 출력
-        flagId.add(randomId); // 사용한 ID 목록에 추가
-
-        if (id.isEmpty()) {
-            return ResponseEntity.notFound().build(); // 10번 다 출력하면 404 응답 반환
-        }
-
-        Optional<Flag> flag = flagService.getFlagDetails(randomId);
-
-        if (flag.isPresent()) {
-            FlagDTO flagDTO = new FlagDTO(flag);
-            return ResponseEntity.ok(flagDTO);
-        }
-        else {
-            return ResponseEntity.notFound().build();
-        }
+    public List<FlagQuestionDTO> getFoodQuestion() {
+        return flagService.getFlagQuestion();
     }
 
-
     @GetMapping("/flag/hint/{id}") // 힌트 가져오기
-    public ResponseEntity<String> getHint(@PathVariable("id") Long id) {
+    public ResponseEntity<Map<String, String>> getHint(@PathVariable("id") Long id) {
         Optional<Flag> optionalHint = flagRepository.findById(id);
         if (optionalHint.isPresent()) {
             Flag flag = optionalHint.get();
             String hint = flag.getHint();
-            return ResponseEntity.ok(hint);
+            Map<String, String> response = new HashMap<>();
+            response.put("hint", hint);
+            return ResponseEntity.ok(response);
         }
         else {
             return ResponseEntity.notFound().build();
@@ -58,12 +41,14 @@ public class FlagController {
     }
 
     @GetMapping("/answer/flag/{id}") // 정답 가져오기
-    public ResponseEntity<String> getAnswer(@PathVariable("id") Long id) {
+    public ResponseEntity<Map<String, String>> getAnswer(@PathVariable("id") Long id) {
         Optional<Flag> optionalAnswer = flagRepository.findById(id);
         if (optionalAnswer.isPresent()) {
             Flag flag = optionalAnswer.get();
             String answer = flag.getAnswer();
-            return ResponseEntity.ok(answer);
+            Map<String, String> response = new HashMap<>();
+            response.put("answer", answer);
+            return ResponseEntity.ok(response);
         }
         else {
             return ResponseEntity.notFound().build();
@@ -71,12 +56,14 @@ public class FlagController {
     }
 
     @GetMapping("/info/flag/{id}") // 설명 가져오기
-    public ResponseEntity<String> getInfo(@PathVariable("id") Long id) {
+    public ResponseEntity<Map<String, String>> getInfo(@PathVariable("id") Long id) {
         Optional<Flag> optionalInfo = flagRepository.findById(id);
         if (optionalInfo.isPresent()) {
             Flag flag = optionalInfo.get();
             String info = flag.getInfo();
-            return ResponseEntity.ok(info);
+            Map<String, String> response = new HashMap<>();
+            response.put("info", info);
+            return ResponseEntity.ok(response);
         }
         else {
             return ResponseEntity.notFound().build();

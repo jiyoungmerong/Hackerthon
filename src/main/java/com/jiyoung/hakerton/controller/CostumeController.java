@@ -2,6 +2,8 @@ package com.jiyoung.hakerton.controller;
 
 import com.jiyoung.hakerton.domain.Costume;
 import com.jiyoung.hakerton.domain.dto.CostumeDTO;
+import com.jiyoung.hakerton.domain.dto.CostumeQuestionDTO;
+import com.jiyoung.hakerton.domain.dto.FlagQuestionDTO;
 import com.jiyoung.hakerton.repository.CostumeRepository;
 import com.jiyoung.hakerton.service.CostumeService;
 import lombok.RequiredArgsConstructor;
@@ -21,50 +23,33 @@ public class CostumeController {
     private final CostumeRepository costumeRepository;
 
     @GetMapping("/costume")
-    public ResponseEntity<CostumeDTO> getRandomCostume() {
-        List<Long> id = new ArrayList<>(costumeService.getCostumeId());
-
-        Collections.shuffle(id); // 리스트 섞기
-
-        Long randomId = id.get(0); // 첫번째 요소 출력
-
-        costumeId.add(randomId); // 사용한 id를 set 목록에 추가
-
-        if (id.isEmpty()) {
-            return ResponseEntity.notFound().build(); // 10번 다 출력하면 404 응답 반환
-        }
-
-        Optional<Costume> costume = costumeService.getCostumeDetails(randomId);
-
-        if (costume.isPresent()) {
-            CostumeDTO costumeDTO = new CostumeDTO(costume);
-            return ResponseEntity.ok(costumeDTO);
-        }
-        else {
-            return ResponseEntity.notFound().build();
-        }
+    public List<CostumeQuestionDTO> getCostumeQuestion() {
+        return costumeService.getCostumeQuestion();
     }
 
     @GetMapping("/costume/hint/{id}") // 힌트 가져오기
-    public ResponseEntity<String> getHint(@PathVariable("id") Long id) {
+    public ResponseEntity<Map<String, String>> getHint(@PathVariable("id") Long id) {
         Optional<Costume> optionalHint = costumeRepository.findById(id);
         if (optionalHint.isPresent()) {
             Costume costume = optionalHint.get();
             String hint = costume.getHint();
-            return ResponseEntity.ok(hint);
-        }
-        else {
+            Map<String, String> response = new HashMap<>();
+            response.put("hint", hint);
+            return ResponseEntity.ok(response);
+        } else {
             return ResponseEntity.notFound().build();
         }
     }
 
     @GetMapping("/answer/costume/{id}") // 정답 가져오기
-    public ResponseEntity<String> getAnswer(@PathVariable("id") Long id) {
+    public ResponseEntity<Map<String, String>> getAnswer(@PathVariable("id") Long id) {
         Optional<Costume> optionalAnswer = costumeRepository.findById(id);
         if (optionalAnswer.isPresent()) {
             Costume costume = optionalAnswer.get();
             String answer = costume.getAnswer();
-            return ResponseEntity.ok(answer);
+            Map<String, String> response = new HashMap<>();
+            response.put("answer", answer);
+            return ResponseEntity.ok(response);
         }
         else {
             return ResponseEntity.notFound().build();
@@ -72,12 +57,14 @@ public class CostumeController {
     }
 
     @GetMapping("/info/costume/{id}") // 설명 가져오기
-    public ResponseEntity<String> getInfo(@PathVariable("id") Long id) {
+    public ResponseEntity<Map<String, String>> getInfo(@PathVariable("id") Long id) {
         Optional<Costume> optionalInfo = costumeRepository.findById(id);
         if (optionalInfo.isPresent()) {
             Costume costume = optionalInfo.get();
             String info = costume.getInfo();
-            return ResponseEntity.ok(info);
+            Map<String, String> response = new HashMap<>();
+            response.put("info", info);
+            return ResponseEntity.ok(response);
         }
         else {
             return ResponseEntity.notFound().build();
