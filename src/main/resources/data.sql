@@ -70,16 +70,69 @@ insert into choice(one, two, three, four) values ("캐나다", "뉴질랜드", "
 
 insert into food(url, question, info, hint, answer) values("https://assets2.lottiefiles.com/packages/lf20_rvfycj0u.json",
                                                            "다음은 어느 나라의 전통 음식일까요?",
-                                                           "밀가루로 만든 얇고 납작한 반죽에 토마토 소스와 치즈 등 토핑을 얹어서 구워 내는 이탈리아에서 시작한 요리입니다. 세계 각지에서 가장 대중적으로 사랑받는 요리 가운데 하나로, 이탈리아를 대표하는 요리이며, 파스타와 함께 이탈리아의 상징과도 같은 음식이라 할 수 있습니다.",
+                                                           "피자는 밀가루로 만든 얇고 납작한 반죽에 토마토 소스와 치즈 등 토핑을 얹어서 구워 내는 이탈리아에서 시작한 요리입니다. 세계 각지에서 가장 대중적으로 사랑받는 요리 가운데 하나로, 이탈리아를 대표하는 요리이며, 파스타와 함께 이탈리아의 상징과도 같은 음식이라 할 수 있습니다.",
                                                            "미국과 이 나라에서 만드는 방식에 차이가 있습니다. 이 나라에서는 크기가 미국 음식에 비해 작은 경향이 있습니다.",
                                                            "이탈리아");
-insert into food(url, question, info, hint, answer) values("");
-insert into food(url, question, info, hint, answer) values("");
-insert into food(url, question, info, hint, answer) values("");
-insert into food(url, question, info, hint, answer) values("");
+insert into food(url, question, info, hint, answer) values("https://img.medicalreport.kr/resources/2019/02/02/CMBbwKcvaWZHMfPT.jpg",
+                                                           "다음은 어느 나라의 전통 음식일까요?",
+                                                           "케밥으로, 가장 유명한 종류 중 하나는 터키 케밥입니다. 터키 케밥은 양고기, 소고기, 닭고기 등 다양한 종류의 고기를 사용하며, 특히 양고기로 만든 양고기 케밥은 유명합니다. 이 고기는 대형 수직 회전하는 스핏(수직 로터리 그릴)에서 천천히 구워집니다. 그리고 더해지는 재료로는 토마토, 양파, 샐러드, 요거트 소스 등이 있습니다. 전통적으로는 플랫브레드인 피타 또는 랩에 고기와 재료를 싸서 먹는 스타일입니다.",
+                                                           "중동과 지중해 지역을 중심으로 유명한 음식으로, 고기, 채소 또는 해산물을 꼬치에 꿰어 구워내는 요리입니다.",
+                                                           "터키");
+insert into food(url, question, info, hint, answer) values("https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/200702/htm_20070213102954l000l800-001.JPG",
+                                                           "다음은 어느 나라의 전통 음식일까요?",
+                                                           "딤섬은 중국의 전통적인 음식으로, 작고 가득한 손으로 만든 소형 요리물을 의미합니다. 주로 아무런 케이크 같은 밀가루 반죽에 다양한 재료를 넣고 증기로 익혀 만듭니다. 다양한 종류의 딤섬이 있지만, 가장 유명한 것은 홍콩 스타일 딤섬입니다. 홍콩 스타일 딤섬은 얇고 부드러운 밀가루 반죽으로 만들어지며, 속에는 고기, 해산물, 채소 등 다양한 재료가 들어갑니다. 주로 돼지고기, 새우, 게, 닭고기, 소고기 등을 사용하며, 신선한 재료와 정교한 조리법이 특징입니다. 딤섬은 증기기로 삶거나 찐 후에 고기와 재료가 익어 부드럽고 맛있는 요리로 완성됩니다.",
+                                                           "대개 소스와 함께 제공되며, 대표적인 소스로는 간장, 초간장, 차 스즈, 고추 소스 등이 있습니다. 딤섬을 먹을 때는 소스에 찍어 함께 먹거나, 매운 고추 소스 등을 추가하여 개인의 취향에 맞게 즐길 수 있습니다.",
+                                                           "중국");
+insert into food(url, question, info, hint, answer) values("https://baessal.com/wp-content/uploads/2022/01/s-05.jpg",
+                                                           "다음은 어느 나라의 전통 음식일까요?",
+                                                           "쌀국수는 동남아시아에서 매우 인기 있는 음식으로, 주로 베트남 요리로 알려져 있습니다. 쌀가루로 만든 얇고 탄탄한 면발에 다양한 재료와 스프를 곁들여 먹는 요리입니다. 신선한 채소, 고기 또는 해산물, 신맛과 매운맛을 조화시킨 소스 등이 주요한 구성 요소입니다. 쌀국수는 주로 생선 소스 또는 닭고기 또는 소고기 육수를 기반으로 하는 스프와 함께 제공됩니다. 이 면발은 투명하고 탄탄하며 살짝 씹히는 식감을 가지고 있습니다. 쌀국수는 다양한 재료와 함께 조리되어 다채로운 맛과 풍미를 내며, 보통 새우, 돼지고기, 닭고기, 생선, 해산물 등이 함께 사용됩니다.",
+                                                           "프라이드 랩이 유명하며 가볍고 건강한 동남아시아 음식입니다.",
+                                                           "베트남");
+insert into food(url, question, info, hint, answer) values ("https://i.namu.wiki/i/dgjXU86ae29hDSCza-L0GZlFt3T9lRx1Ug9cKtqWSzMzs7Cd0CN2SzyLFEJcHVFviKcxAlIwxcllT9s2sck0RA.jpg",
+                                                           "다음은 어느 나라의 전통 음식일까요?",
+                                                           "비빔밥은 대한민국의 전통 음식으로, 다양한 채소, 고기, 계란 등 다양한 재료를 고추장 또는 간장 소스와 함께 비벼 먹는 요리입니다. 비빔은 섞다라는 뜻을 가지고 있으며, 밥과 다양한 재료를 잘 섞어 먹는 것이 특징입니다. 비빔밥은 주로 밥 위에 양념된 나물, 채소, 고기, 계란 등을 올리고, 간장 또는 고추장 기반의 양념을 넣어 비벼 먹습니다. 대표적으로는 고추장을 기반으로 하는 고추장 비빔밥과 간장을 기반으로 하는 간장 비빔밥이 있습니다. 그 외에도 돌솥 비빔밥이나 전주 비빔밥 등 지역에 따라 다양한 스타일이 존재합니다.",
+                                                           "색감이 아름답고 다양한 재료와 소스의 조화로 인해 매우 맛있는 음식으로 알려져 있습니다.",
+                                                           "대한민국");
 
 insert into choice(one, two, three, four) values ("이탈리아", "모로코", "사우디아라비아","네덜란드");
-insert into choice(one, two, three, four) values ("이집트", "나이지리아", "대한민국","터키");
-insert into choice(one, two, three, four) values ("이란", "스웨덴", "독일","중국");
-insert into choice(one, two, three, four) values ("미국", "말레이시아", "멕시코","그리스");
-insert into choice(one, two, three, four) values ("캐나다", "뉴질랜드", "호주","이집트");
+insert into choice(one, two, three, four) values ("북한", "남아프리카 공화국", "이란","터키");
+insert into choice(one, two, three, four) values ("중국", "벨기에", "그리스","칠레");
+insert into choice(one, two, three, four) values ("콜롬비아", "에티오피아", "베트남","미국");
+insert into choice(one, two, three, four) values ("영국", "대한민국", "프랑스","인도");
+
+insert into landmark(url, question, info, hint, answer) values ("https://eb.findmybucketlist.com/bucket/new/cp/4637666_cp_00.jpg?update_date=2021-02-0817:20:47",
+                                                                "다음은 어느 나라에 있는 랜드마크일까요?",
+                                                                "자유의 여신상은 1886년에 처음으로 뉴욕 항구에 세워졌으며, 이후로는 자유와 민주주의를 상징하는 대표적인 상징물로 알려져 있습니다. 방문자들은 여신상까지 배를 이용하여 가는 경험을 할 수 있으며, 내부에는 역사 및 문화 관련 전시물이 전시되어 있습니다. 자유의 여신상은 미국의 상징으로서, 이민자들이 미국을 향해 가는 항구를 상징하고 있습니다. 그녀는 자유와 평등, 인권, 자주주의의 가치를 상징하며, 많은 사람들에게 용기와 희망을 줄 수 있는 상징적인 존재입니다.",
+                                                                "자유의 상징이며, 정식 명칭은 자유의 조형물입니다. 프랑스의 조각가 프레드리크 오귀스트 바르톨디의 작품으로, 프랑스에서 제작되어 미국에 선물로 전달되었습니다.",
+                                                                "미국");
+
+insert into landmark(url, question, info, hint, answer) values ("https://www.traveldaily.co.kr/news/photo/201606/5231_6255_3857.jpg",
+                                                                "다음은 어느 나라에 있는 랜드마크일까요?",
+                                                                "마추 피추는 페루 안데스 산맥 근처에 위치한 고고학적 유적지로, 세계적으로 유명한 명소 중 하나입니다. 정확한 명칭은 마추 피추 시타델입니다. 이곳은 인카 제국 시대에 건설된 도시 유적으로 알려져 있습니다.마추 피추 시타델은 높은 산의 정상에 위치하며, 산세에 따라 계단식으로 조성된 돌로 된 건물들로 이루어져 있습니다. 주로 석재로 건설된 이 도시는 인카 제국의 중요한 정치, 종교 및 문화 중심지로 여겨지며, 특히 태양의 숭배와 관련된 중요한 신성지로 알려져 있습니다.",
+                                                                "안데스 산맥에 위치한 고고학적 유적지로 이카인 치타에서 이어지는 산책로로 유명합니다.",
+                                                                "페루");
+
+insert into landmark(url, question, info, hint, answer) values ("https://media-cdn.tripadvisor.com/media/photo-s/17/3b/95/61/photo2jpg.jpg",
+                                                                "다음은 어느 나라에 있는 랜드마크일까요?",
+                                                                "시드니 오페라 하우스는 호주의 수도인 시드니에 위치한 세계적으로 유명한 음악극장입니다. 20세기 건축의 걸작 중 하나로 인정받으며, 현대 건축의 상징이자 시드니의 상징적인 랜드마크로 알려져 있습니다. 오페라 하우스는 1973년에 완공되었으며, 덴마크의 건축가 요른 우트손에 의해 설계되었습니다. 건물의 형태는 다섯 개의 큰 껍질로 이루어져 있으며, 해안에 솟아 있는 조개를 연상시키는 유니크한 디자인을 가지고 있습니다. 각 껍질은 오각형 형태로 구성되어 있으며, 화이트 그래나이트로 마감되어 있습니다.",
+                                                                " 주로 음악, 연극, 오페라, 무용 등의 공연을 위해 사용되는 다목적 극장입니다. 내부에는 다양한 극장과 연습실, 음악 기록실 등이 있으며, 최신 기술과 설비를 갖추고 있어 세계적인 예술 공연을 개최할 수 있습니다.",
+                                                                "호주");
+
+insert into landmark(url, question, info, hint, answer) values ("https://youimg1.tripcdn.com/target/10070z000000nuo0z8B54.jpg",
+                                                                "다음은 어느 나라에 있는 랜드마크일까요?",
+                                                                "이집트 피라미드는 역사적으로 중요한 이집트 문명의 상징이자 명실상부한 건축 기적입니다. 이집트의 고대 왕국 시대에 세워진 이 피라미드는 인류 최초의 거대한 돌로 된 무덤으로 사용되었습니다. 피라미드는 삼각형 형태의 고성으로, 직각삼각형의 세 변이 기둥처럼 서로 만나는 형태로 구성됩니다. 주로 석재로 건설되었으며, 주로 석회암이나 조약돌로 만들어졌습니다. 이집트 피라미드는 왕이 죽은 뒤 무덤으로 사용되었으며, 왕의 영혼이 부활하여 다음 세계로 이동할 수 있도록 보호하기 위한 목적으로 건설되었습니다.",
+                                                                "완벽한 사각형으로 만들기 위해 천문학적인 계산을 사용했으며, 각 면의 방향은 정확히 북쪽, 남쪽, 동쪽, 서쪽을 가리키도록 설계되었습니다.",
+                                                                "이집트");
+
+insert into landmark(url, question, info, hint, answer) values ("https://mblogthumb-phinf.pstatic.net/MjAxOTAyMTdfMjE2/MDAxNTUwMzM1NzUzNDY0.xg38EuiLlG_eGb04s0fICdQrMcDcufbboEgLsePzNX4g.bPLmhLQoJDMBZUD1KSlgjjMwnE0qHSgsZ89GCWSaN48g.JPEG.iti1351/IMG_3887.JPG?type=w2",
+                                                                "다음은 어느 나라에 있는 랜드마크일까요?",
+                                                                "타지마할은 인도의 아그라에 위치한 명승지로, 세계적으로 유명한 건축물입니다. 17세기에 완공된 이 건물은 인도의 문화 유산으로 인정받으며, 유네스코 세계문화유산에 등재되어 있습니다. 타지마할은 무굴 제국의 황제 샤자한이 그의 사랑하는 왕비를 기리기 위해 세운 무덤으로 알려져 있습니다. 완벽한 대리석으로 건설된 타지마할은 그 아름다운 아치, 석수, 장식적인 세부사항과 함께 심도 있는 기하학적 구조를 자랑합니다.",
+                                                                "화려한 모래색 돔과 화이트 마블로 만들어진 무덤으로 유명합니다.",
+                                                                "인도");
+
+
+insert into choice(one, two, three, four) values ("중국", "일본", "대한민국","미국");
+insert into choice(one, two, three, four) values ("북한", "페루", "이란","터키");
+insert into choice(one, two, three, four) values ("중국", "벨기에", "호주","칠레");
+insert into choice(one, two, three, four) values ("콜롬비아", "대한민국", "베트남","이집트");
+insert into choice(one, two, three, four) values ("영국", "인도", "스페인", "스웨덴");
