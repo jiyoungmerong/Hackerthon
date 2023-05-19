@@ -13,6 +13,7 @@ public class Flag {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(length = 1000000000)
     private String url; // 국기 url
 
     private String question; // 국기_질문
