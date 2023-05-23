@@ -4,27 +4,32 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import static jakarta.persistence.GenerationType.IDENTITY;
+import static lombok.AccessLevel.PROTECTED;
+
 @Entity
 @Getter
-@NoArgsConstructor
+@NoArgsConstructor(access = PROTECTED)
 public class Costume {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = IDENTITY)
+    @Column(name = "costume_id")
     private Long id;
 
-    private String url; // 의상_url
+    @Column(columnDefinition = "TEXT")
+    private String url;
 
-    private String question; // 의상_질문
+    private String question;
 
-    private String info; // 의상_설명
+    @Column(length = 10000000)
+    private String info;
 
-    private String hint; // 의상_힌트
+    private String hint;
 
-    private String answer; // 의상_정답
+    private String answer;
 
-    @OneToOne
-    @JoinColumn(name = "id")
+    @OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "choice_id")
     private Choice choice;
-
 }

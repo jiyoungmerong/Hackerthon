@@ -1,31 +1,36 @@
 package com.jiyoung.hakerton.domain;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import static jakarta.persistence.GenerationType.IDENTITY;
+import static lombok.AccessLevel.PROTECTED;
+
 @Entity
 @Getter
-@NoArgsConstructor
+@NoArgsConstructor(access = PROTECTED)
 public class Choice {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = IDENTITY)
+    @Column(name = "choice_id")
     private Long id;
 
-    private String one; // 객관식 1
+    private String one;
 
-    private String two; // 객관식 2
+    private String two;
 
-    private String three; // 객관식 3
+    private String three;
 
-    private String four; // 객관식 4
+    private String four;
 
-    @OneToOne
-    private Costume costume;
-
-    @OneToOne
-    private Flag flag;
-
+    @Builder
+    public Choice(String one, String two, String three, String four) {
+        this.one = one;
+        this.two = two;
+        this.three = three;
+        this.four = four;
+    }
 }
-

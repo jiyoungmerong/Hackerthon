@@ -10,11 +10,11 @@ import static lombok.AccessLevel.PROTECTED;
 @Entity
 @Getter
 @NoArgsConstructor(access = PROTECTED)
-public class Flag {
+public class Landmark {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
-    @Column(name = "flag_id")
+    @Column(name = "landmark_id")
     private Long id;
 
     @Column(columnDefinition = "TEXT")
@@ -32,4 +32,6 @@ public class Flag {
     @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "choice_id")
     private Choice choice;
+
+
 }
